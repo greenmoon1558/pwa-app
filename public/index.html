@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#FFE1C4" />
+    <title>Ninja Food</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png" />
+    <link name="apple-mobile-web-app-status-bar" content="#aa7700" />
+  </head>
+  <body class="grey lighten-4">
+    <nav class="z-depth-0">
+      <div class="nav-wrapper container">
+        <a href="/">Food <span>Ninja</span></a>
+        <span class="right grey-text text-darken-1">
+          <i class="material-icons sidenav-trigger" data-target="side-menu"
+            >menu</i
+          >
+        </span>
+      </div>
+    </nav>
+    <ul id="side-menu" class="sidenav side-menu">
+      <li>
+        <a href="/" class="subheader">FOODNINJA</a>
+      </li>
+      <li>
+        <a href="/" class="waves-effect">Home </a>
+      </li>
+      <li>
+        <a href="/pages/about.html" class="waves-effect">About </a>
+      </li>
+      <li><div class="divider"></div></li>
+      <li>
+        <a href="/pages/contact.html" class="waves-effect">
+          <i class="material-icons">mail_outline</i>Contact
+        </a>
+      </li>
+    </ul>
+
+    <div class="recipes container gray-text text-darken-1">
+      <h6 class="center">Recipes</h6>
+    </div>
+
+    <div class="center">
+      <a class="btn-floating add-btn sidenav-trigger" data-target="side-form">
+        <i class="material-icons">add</i>
+      </a>
+    </div>
+    <div id="side-form" class="sidenav side-form">
+      <form class="add-recipe container section">
+        <h6>New Recipe</h6>
+        <div class="divider"></div>
+        <div class="input-field">
+          <input
+            type="text"
+            placeholder="e.g. Ninja soup"
+            class="validate"
+            id="title"
+          />
+          <label for="title">Recipe Title</label>
+        </div>
+        <div class="input-field">
+          <input
+            type="text"
+            placeholder="e.g. Tofu, mushroom, garlic"
+            class="validate"
+            id="ingredients"
+          />
+          <label for="ingredients">Ingredients</label>
+        </div>
+        <div class="input-field center">
+          <button class="btn-small">Add</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBRJyUjeTJTWh9GedbSurPx-wp6JrcC-6c",
+        authDomain: "foodninja-8d3ad.firebaseapp.com",
+        databaseURL: "https://foodninja-8d3ad.firebaseio.com",
+        projectId: "foodninja-8d3ad",
+        storageBucket: "foodninja-8d3ad.appspot.com",
+        messagingSenderId: "470096185062",
+        appId: "1:470096185062:web:66c5884548bd5615"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    </script>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/db.js"></script>
+    <script src="./js/ui.js"></script>
+  </body>
+</html>
